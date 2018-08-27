@@ -105,7 +105,8 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' } " NerdTree directory bro
 Plug 'airblade/vim-gitgutter' " GitGutter displays git diffs in margin.
 Plug 'vim-airline/vim-airline' " Status/Tabline.
 Plug 'vim-airline/vim-airline-themes' " Theme of airline.
-Plug 'junegunn/fzf' " Fuzzy file finder.
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Will install command line fzf as well.
+Plug 'junegunn/fzf.vim' " Fuzzy file finder.
 Plug 'w0rp/ale' " Asynchronous Lint Engine.
 Plug 'tpope/vim-fugitive' " Git wrapper.
 Plug 'scrooloose/nerdcommenter' " For commenting files.
