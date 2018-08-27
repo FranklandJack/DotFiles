@@ -1,6 +1,5 @@
 " Jack Frankland's .vimrc Configuration
 " =====================================
-" vim:foldmethod=marker:foldlevel=0:ts=4:sts=4:sw=4
 " ViCompatibility(DO NOT MOVE - MUST BE FIRST IN FILE) {{{
 " ============
 " If a .vimrc is found in the $HOME directory then `:set nocompatible`
@@ -85,6 +84,12 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 "}}}
+" Modelines {{{
+" =========
+" Debian, Ubuntu, Gentoo, OSX, etc. by default disable modelines for security reasons.
+set modeline 
+set modelines=5
+" }}}
 " Plugins {{{
 " =======
 " Automatic VimPlug installation.
@@ -274,3 +279,4 @@ set noshowmode " Don't show current mode (is shown in airline bar anyway).
 " UNDO/Backups {{{
 " ============
 " }}}
+" vim: foldenable foldmethod=marker foldlevel=0 ts=4 sts=4 sw=4
