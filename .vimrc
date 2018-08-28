@@ -69,6 +69,8 @@ nnoremap <C-l> <C-w>l
 " For exiting insert mode without moving away from home row.
 inoremap jk <Esc>
 inoremap kj <Esc>
+" To stop myself reaching for escape (TEMPORARY).
+inoremap <C-[> <Nop>
 " For reloading .vimrc file, useful if changes are made and don't want to exit
 " vim.
 nnoremap <leader>r :so $MYVIMRC<CR>
