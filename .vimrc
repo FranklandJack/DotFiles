@@ -54,6 +54,8 @@ set history=1000 " Set length of command history.
 " ========
 " Set leader key to be spacebar.
 let mapleader=" " 
+" Normal Mode {{{
+" ===========
 " Exit viewport quickly.
 nnoremap <Leader>q :q<CR>
 " Focus on single viewport quickly.
@@ -66,17 +68,37 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-" For exiting insert mode without moving away from home row.
-inoremap jk <Esc>
-inoremap kj <Esc>
-" To stop myself reaching for escape (TEMPORARY).
-inoremap <C-[> <Nop>
 " For reloading .vimrc file, useful if changes are made and don't want to exit
 " vim.
 nnoremap <leader>r :so $MYVIMRC<CR>
 " For more quickly opening new tabs.
 nnoremap <leader>t :tabnew<CR>
+" So Y behaves like D and C and yanks to the end of the line without yanking
+" newline character.
+nnoremap Y y$
 "}}}
+" Insert Mode {{{
+" ===========
+" For exiting insert mode without moving away from home row.
+inoremap jk <Esc>
+inoremap kj <Esc>
+" To stop myself reaching for escape (TEMPORARY).
+inoremap <C-[> <Nop>
+" }}}
+" Visual Mode {{{
+" For quicker movement between viewports in insert mode.
+xnoremap <C-h> <C-w>h
+xnoremap <C-j> <C-w>j
+xnoremap <C-k> <C-w>k
+xnoremap <C-l> <C-w>l
+" }}}
+" Command Mode {{{
+" ============
+" For command line like movement from start to end of entered text.
+nnoremap <C-a> <Home>
+nnoremap <C-e> <End>
+"}}}
+" }}}
 " Misc {{{
 " ====
 set mouse= " Disable mouse.
