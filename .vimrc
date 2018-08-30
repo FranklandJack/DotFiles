@@ -92,6 +92,13 @@ noremap <Right> <NOP>
 set modeline 
 set modelines=5
 " }}}
+" Pasting/Copying {{{
+" ===============
+" Copy/Paste to system clipboard.
+map <leader>y "+y
+map <leader>p "+gp
+map <leader>P "+gP
+"}}}
 " Plugins {{{
 " =======
 " Automatic VimPlug installation.
