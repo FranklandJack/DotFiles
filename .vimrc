@@ -215,10 +215,12 @@ set modelines=5
 " }}}
 " Pasting/Copying {{{
 " ===============
-" Copy/Paste to system clipboard.
-map <leader>y "+y
-map <leader>p "+gp
-map <leader>P "+gP
+if has('clipboard')
+    " Copy/Paste to system clipboard.
+    map <leader>y "+y
+    map <leader>p "+gp
+    map <leader>P "+gP
+endif
 "}}}
 " Plugins {{{
 " =======
