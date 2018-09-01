@@ -205,6 +205,7 @@ if exists('&bellof')
 	set belloff=all " Never ring the bell for any reason.
 endif
 set expandtab "Always use spaces.
+
 "}}}
 " Modelines {{{
 " =========
@@ -398,19 +399,40 @@ set spelllang=en_us " Set spellcheck language.
 " Tab Completion {{{
 " ==============
 " Turn on wildmenu for file name tab completion.
-set wildmode=longest,list,full
-set wildmenu
+if has('wildmenu')
+    set wildmode=longest,list,full
+    set wildmenu
+endif
+ " Patterns to ignore during file-navigation.
+ if has('wildignore')
+     set wildignore+=*.o
+ endif
 " }}}
 " UI {{{
 " ==
 set ruler " Show Ruler.
 set showcmd " Show incomplete commands.
 set number " Line numbers.
+if exists('+relativenumber')
+    set relativenumber " Show relative numbers in gutter.
+endif
 set lazyredraw " Lazy redraw.
 set cursorline " Highlight current line.
 set report=0  " Report number of lines changed for all changes.
 set showmatch " Show matching brackets.
 set noshowmode " Don't show current mode (is shown in airline bar anyway).
+set whichwrap=b,h,l,s,<,>,[,] " Allow <BS>/h/l/<left>,<right>/<space>, to cross line boundries.
+if has('windows')
+    set splitbelow " Open horizontal splits below current window.
+endif
+
+if has('vertsplit')
+    set splitright " Open vertical splits to right of current window.
+endif
+
+if has('virtualedit')
+    set virtualedit=block "Allow cursor to move where there is no text in visual blockmode (stops cursor getting trapped in empty columns).
+endif
 "}}}
 " UNDO/Backups {{{
 " ============
