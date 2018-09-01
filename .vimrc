@@ -50,6 +50,10 @@ set foldmethod=syntax        " Fold based on syntax (for C++)
 " =======
 set history=1000 " Set length of command history.
 " }}}
+" Indentation {{{
+" ===========
+set autoindent " Maintain indent of current line.
+" }}}
 " Mappings {{{
 " ========
 " Set leader key to be spacebar.
@@ -107,6 +111,9 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+if exists('&bellof')
+	set belloff=all " Never ring the bell for any reason.
+endif
 "}}}
 " Modelines {{{
 " =========
@@ -279,6 +286,12 @@ let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all sele
 " =========
 set scrolloff=5            " Keep a minimum of 5 line below the cursor.
 set sidescrolloff=5        " Keep a minimum of 5 columns left of the cursor.
+if has('linebreak')
+	set breakindent " Indent wrapped lines to match indentation of line they wrapped from.
+	if exists('&breakindentopt')
+		set breakindentopt=shift:2 " Emphasize broken lines by indenting them.
+	endif
+endif
 " }}}
 " Searching {{{
 " =========
