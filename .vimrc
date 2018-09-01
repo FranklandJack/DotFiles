@@ -9,6 +9,48 @@ if &compatible
   set nocompatible
 endif
 " }}}
+" Backup/Swapfiles/undo {{{
+" =====================
+" Backup files {{{
+" ============
+if exists('$SUDO_USER') " Check whether we are editing as sudoer.
+	set nobackup " If we are don't creat backups
+	set	nowritebackup " or backups during writing to a file since they won't be able to be opened by non sudoers.
+else
+	" Back up directories are appended to list in the following order and the
+	" first on found is used.
+	" Keep backup files out of the way.
+	set backupdir=~/local/.vim/tmp/backup
+	set backupdir+=~/.vim/tmp/backup
+	set backupdir+=. " Use pwd as last resort so backups stay out of the way.
+endif
+" }}}
+" Swapfiles {{{
+" =========
+if exists('$SUDO_USER')
+	set noswapfile
+else
+	" Keep swapfiles out of the way.
+	set directory=~/local/.vim/tmp/swap//
+	set directory+=~/.vim/tmp/swap//
+	set directory+=.
+	" Note: // avoids naming conflicts by using absolute paths.
+endif
+" }}}
+" Undo {{{
+" ====
+if has('persistant_undo')
+	if exists('$SUDO_USER')
+		set noundofile
+	else
+		set undodir=~/local/.vim/tmp/undo
+		set undodir+=~/.vim/tmp/undo
+		set undodir+=.
+		set undofile " Actually use undo files.
+	endif
+endif
+" }}}
+" }}}
 " Buffers {{{
 " =======
 set hidden "Keep buffers in background without need to save them.
