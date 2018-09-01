@@ -9,10 +9,16 @@ if &compatible
   set nocompatible
 endif
 " }}}
-" Backup/Swapfiles/undo {{{
+" Encoding {{{
+" ========
+set encoding=utf-8
+scriptencoding utf-8
+" }}}
+" Backup/Swapfiles/Undo/Viminfo {{{
 " =====================
 " Backup files {{{
 " ============
+" 
 if exists('$SUDO_USER') " Check whether we are editing as sudoer.
 	set nobackup " If we are don't creat backups
 	set	nowritebackup " or backups during writing to a file since they won't be able to be opened by non sudoers.
@@ -20,9 +26,12 @@ else
 	" Back up directories are appended to list in the following order and the
 	" first on found is used.
 	" Keep backup files out of the way.
-	set backupdir=~/local/.vim/tmp/backup
-	set backupdir+=~/.vim/tmp/backup
+	set backupdir=~/local/.vim/tmp/backup//
+	set backupdir+=~/.vim/tmp/backup//
 	set backupdir+=. " Use pwd as last resort so backups stay out of the way.
+	set backup
+	set writebackup
+	set backupcopy=yes
 endif
 " }}}
 " Swapfiles {{{
@@ -39,15 +48,49 @@ endif
 " }}}
 " Undo {{{
 " ====
-if has('persistant_undo')
+if has('persistent_undo')
 	if exists('$SUDO_USER')
 		set noundofile
 	else
-		set undodir=~/local/.vim/tmp/undo
-		set undodir+=~/.vim/tmp/undo
+		set undodir=~/local/.vim/tmp/undo//
+		set undodir+=~/.vim/tmp/undo//
 		set undodir+=.
 		set undofile " Actually use undo files.
 	endif
+endif
+" }}}
+" Viminfo {{{
+" =======
+if has('viminfo')
+	if exists('$SUDO_USER')
+		set viminfo= " For sudors don't create viminfos for same reasons as above (can't be accessed after by normal users)
+	else 
+		if isdirectory('~/local/.vim/tmp')
+			set viminfo+=n~/local/.vim/tmp/viminfo// "n is the name of the vim info file.
+		else
+			set viminfo+=n~/.vim/tmp/viminfo//
+		endif
+
+		" Check if it is possible to read the viminfo file and display a
+		" warning if it isn't.
+		if !empty(glob('~/.vim/tmp/viminfo'))
+			if !filereadble(expand('~/.vim/tmp/viminfo))
+				echoerr 'warning: ~/.vim/tmp/viminfo exists but is not readable'
+			endif
+		endif
+	endif
+endif
+		
+" }}}
+" Mksession {{{
+" =========
+if has('mksession') "mksession files are used to save the state of sessions e.g. viewports and tabs.
+	if isdirectory('~/local/.vim/tmp')
+		set viewdir=~/local/.vim/tmp/view//
+	else
+		set viewdir=~/.vim/tmp/view//
+	endif
+	set viewoptions=cursor,folds
 endif
 " }}}
 " }}}
@@ -83,10 +126,15 @@ endif
 "}}}
 " Folding {{{
 " =======
-set foldenable               " Enable folding.
-set foldlevelstart=0         " Fold everything upon opening a file.
-set foldnestmax=10           " 10 nested folds max.
-set foldmethod=syntax        " Fold based on syntax (for C++)
+if has('folding')
+	if has('windows')
+		 set fillchars=vert:┃ "Set the vertical line that seperates viewports. Currently using: Unicode Character 'BOX DRAWINGS HEAVY VERTICAL' (U+2503). For some reason this is gated on folding...
+	endif
+	set foldenable               " Enable folding.
+	set foldlevelstart=0         " Fold everything upon opening a file.
+	set foldnestmax=10           " 10 nested folds max.
+	set foldmethod=syntax        " Fold based on syntax (for C++)
+endif
 " }}}
 " History {{{
 " =======
@@ -156,6 +204,7 @@ noremap <Right> <NOP>
 if exists('&bellof')
 	set belloff=all " Never ring the bell for any reason.
 endif
+set expandtab "Always use spaces.
 "}}}
 " Modelines {{{
 " =========
