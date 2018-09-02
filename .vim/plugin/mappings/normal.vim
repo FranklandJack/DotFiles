@@ -1,7 +1,3 @@
-" Exit viewport quickly.
-nnoremap <Leader>q :q<CR>
-" Focus on single viewport quickly.
-nnoremap <Leader>o :only<CR>
 " Treat wrapped lines as newlines for scrolling purposes.
 nnoremap j gj
 nnoremap k gk
