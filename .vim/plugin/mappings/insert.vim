@@ -3,3 +3,5 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 " To stop myself reaching for escape (TEMPORARY).
 inoremap <C-[> <Nop>
+" Convert currently selected word to uppercase.
+inoremap <C-U> <C-[>viwUi
