@@ -127,9 +127,6 @@ set autoread " If file changed outside vim reload it.
 " Folding {{{
 " =======
 if has('folding')
-	if has('windows')
-		 set fillchars=vert:┃ "Set the vertical line that seperates viewports. Currently using: Unicode Character 'BOX DRAWINGS HEAVY VERTICAL' (U+2503). For some reason this is gated on folding...
-	endif
 	set foldenable               " Enable folding.
 	set foldlevelstart=0         " Fold everything upon opening a file.
 	set foldnestmax=10           " 10 nested folds max.
