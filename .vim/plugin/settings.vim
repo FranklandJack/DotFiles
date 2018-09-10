@@ -24,6 +24,7 @@ endif
 if has('virtualedit')
     set virtualedit=block "Allow cursor to move where there is no text in visual blockmode (stops cursor getting trapped in empty columns).
 endif
+set shortmess+=I "Remove splashscreen.
 "}}}
 " Backup/Swapfiles/Undo/Viminfo {{{
 " =====================
