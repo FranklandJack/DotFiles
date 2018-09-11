@@ -1,9 +1,0 @@
-# Ctags settings.
-
-# Basic options.
-        # Generate ctags for all subdirectories.
-        --recurse=yes
-        #  Make tags relative to directory from which ctags is called.
-        --tag-relative=yes
-        # Ignore the .gitfile when generating tags.
-        --exclude=.git
