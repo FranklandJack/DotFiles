@@ -45,6 +45,7 @@ Plug 'junegunn/fzf.vim' " Fuzzy file finder.
 Plug 'w0rp/ale' " Asynchronous Lint Engine.
 Plug 'tpope/vim-fugitive' " Git wrapper.
 Plug 'scrooloose/nerdcommenter' " For commenting files.
+Plug 'majutsushi/tagbar' " For the tagbar.
 " Initialize plugin system
 call plug#end()
 " }}}
