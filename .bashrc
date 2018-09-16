@@ -91,7 +91,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias sl='ls'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -102,8 +101,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.bash/bash_aliases ]; then
+    . ~/.bash/bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -119,6 +118,3 @@ fi
 
 # for fuzzy finder.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# for dot file version control.
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
