@@ -27,13 +27,15 @@ colorscheme default " Set colorscheme.
 " }}}
 " Plugins {{{
 " =======
-" Pathogen set up.
-" Pathogen is stored as a submodule which then adds a directory (bundles) to
-" the runtime path. Bundles contains submodules for the vim plugins.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-" Generates documentation for plugins.
-Helptags
+" Vim >=8 has native support for adding runtime paths.
+if has('packages')
+    packloadall
+else
+    " Use pathogen for plug-in loading.
+    source $HOME/.vim/pack/bundle/opt/vim-pathogen/autoload /pathogen.vim
+    call pathogen#infect('pack/bundle/start/{}')
+    Helptags
+endif
 " }}}
 " Plugin Configuration {{{
 " ====================
