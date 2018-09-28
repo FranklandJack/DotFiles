@@ -119,7 +119,7 @@ nmap <C-x> <plug>(ale_find_references)
 " FZF {{{
 " ===
 " Usage mappings.
-nnoremap <C-t> :Files<CR>
+nnoremap <C-p> :Files<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader>pg :GFiles<CR>
 nnoremap <leader>pc :Commits<CR>
