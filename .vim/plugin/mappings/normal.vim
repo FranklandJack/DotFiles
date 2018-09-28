@@ -1,6 +1,3 @@
-" Treat wrapped lines as newlines for scrolling purposes.
-nnoremap j gj
-nnoremap k gk
 " For quicker movement between viewports.
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
