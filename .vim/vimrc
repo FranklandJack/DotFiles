@@ -57,65 +57,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved' "  Sets how 
 " ==============
 let g:airline_theme='badwolf'
 " }}}
-" ALE {{{
-" ===
-" Enable completion.
-let g:ale_completion_enabled = 1
-" Fix completion bug in some versions of Vim.
-set completeopt=menu,menuone,preview,noselect,noinsert
-
-" Set formatting.
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-
-" Set linters and fixers.
-let g:ale_linters_explicit = 1
-let g:ale_linters = {
-\   'c': [ 'cquery' ],
-\   'cpp': [ 'cquery' ],
-\   'css': [ 'csslint' ],
-\   'llvm': [ 'llc' ],
-\   'lua': [ 'luac' ],
-\   'python': [ 'flake8' ],
-\   'ruby': [ 'rubocop' ],
-\   'rust': [ 'cargo', 'rls' ],
-\   'vim': [ 'vint' ],
-\ }
-
-" Use stable Rust for RLS.
-let g:ale_rust_rls_toolchain = 'stable'
-
-let g:ale_fix_on_save = 0
-let g:ale_fixers = {
-\   '*': [ 'remove_trailing_lines', 'trim_whitespace' ],
-\   'rust': [ 'rustfmt' ],
-\ }
-
-" Disable Ale for .tex.njk files.
-let g:ale_pattern_options = {
-\   '.*\.tex\.njk$': { 'ale_enabled': 0 },
-\ }
-
-" Limit clangtidy checks.
-let g:ale_cpp_clangtidy_checks = ['clang-analyzer-*']
-
-" Set bindings.
-nmap <leader>ad <plug>(ale_go_to_definition)
-nmap <leader>ar <plug>(ale_find_references)
-nmap <leader>ah <plug>(ale_hover)
-nmap <leader>af <plug>(ale_fix)
-nmap <leader>at <plug>(ale_detail)
-nmap <leader>an <plug>(ale_next_wrap)
-nmap <leader>ap <plug>(ale_previous_wrap)
-
-" Set quicker bindings.
-nmap <C-n> <plug>(ale_next_wrap)
-nmap <C-@> <plug>(ale_previous_wrap)
-nmap <C-q> <plug>(ale_go_to_definition)
-nmap <C-s> <plug>(ale_fix)
-nmap <C-x> <plug>(ale_find_references)
-" }}}
 " FZF {{{
 " ===
 " Usage mappings.
