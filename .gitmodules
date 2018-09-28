@@ -31,6 +31,3 @@
 [submodule ".vim/pack/bundle/start/vim-fugitive"]
 	path = .vim/pack/bundle/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pack/bundle/start/Potion"]
-	path = .vim/pack/bundle/start/Potion
-	url = https://github.com/FranklandJack/Potion.git
