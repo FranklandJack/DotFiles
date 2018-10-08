@@ -34,3 +34,6 @@
 [submodule ".vim/pack/bundle/start/llvm-vim"]
 	path = .vim/pack/bundle/start/llvm-vim
 	url = https://github.com/FranklandJack/llvm-vim.git
+[submodule ".vim/pack/bundle/start/formative.vim"]
+	path = .vim/pack/bundle/start/formative.vim
+	url = https://github.com/frasercrmck/formative.vim.git
