@@ -25,18 +25,6 @@ let maplocalleader="\\" " Set local leader to be backslash.
 " =====
 colorscheme default " Set colorscheme.
 " }}}
-" Plugins {{{
-" =======
-" Vim >=8 has native support for adding runtime paths.
-if has('packages')
-    packloadall
-else
-    " Use pathogen for plug-in loading.
-    source $HOME/.vim/pack/bundle/opt/vim-pathogen/autoload /pathogen.vim
-    call pathogen#infect('pack/bundle/start/{}')
-    Helptags
-endif
-" }}}
 " Plugin Configuration {{{
 " ====================
 " Badwolf {{{
@@ -108,5 +96,25 @@ let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (us
 let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting.
 let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not.
 " }}}
+" Formative {{{
+" =========
+let g:fmtv_clang_format_nor_key  = '<C-a>' 
+let g:fmtv_clang_format_vis_key  = '<C-a>'  
+let g:fmtv_clang_format_ins_key  = '<C-a>'  
+let g:fmtv_clang_format_line_key = '<C-a>a'  
+let g:fmtv_clang_format_file_key = '<C-a>u' 
+" }}}
+" }}}
+" Plugins {{{
+" =======
+" Vim >=8 has native support for adding runtime paths.
+if has('packages')
+    packloadall
+else
+    " Use pathogen for plug-in loading.
+    source $HOME/.vim/pack/bundle/opt/vim-pathogen/autoload /pathogen.vim
+    call pathogen#infect('pack/bundle/start/{}')
+    Helptags
+endif
 " }}}
 " vim: foldenable foldmethod=marker foldlevel=0 ts=4 sts=4 sw=4
