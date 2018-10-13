@@ -1,0 +1,46 @@
+! Xresources colours - tango theme.
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+! urxvt terminal settings.
+
+! Specifies terminal type name to be set in $TERM enviroment variable - tmux seems to need this.
+URxvt*termName: xterm-256color
+
+! Make background black.
+URxvt*background: Black
+! Make standard text white
+URxvt*foreground: White
+! Color of underlined words.
+URxvt*colorUL: Yellow
+! Color of underline itself.
+URxvt*underlineColor: Yellow
+
+! Remove the scroll bar.
+URxvt*scrollBar: flase
+
+! Set the fonts.
+URxvt*font: xft:Hermit:medium:size=12:antialiasing=true
+URxvt*boldFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+URxvt*italicFont: xft:Hermit:medium:size=12:antialiasing=true:style=medium
+URxvt*boldItalicFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+! This sets the spacing between unicode characters and is required to 
+! render unicode characters.
+URxvt*letterSpace: 2
+
+! Set blinking cursor.
+URxvt*cursorBlink: true
