@@ -105,6 +105,11 @@ if [ -f ~/.bash/bash_aliases ]; then
     . ~/.bash/bash_aliases
 fi
 
+# Set default text editor for programs to use should they neeed
+# textual input.
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
