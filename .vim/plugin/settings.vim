@@ -24,7 +24,14 @@ endif
 if has('virtualedit')
     set virtualedit=block "Allow cursor to move where there is no text in visual blockmode (stops cursor getting trapped in empty columns).
 endif
+
 set shortmess+=I "Remove splashscreen.
+
+if exists('+colorcolumn')
+    " Highlight up to 255 columns (this is the current Vim max) beyond 
+    " 'text width'
+    let &l:colorcolumn='+' . join(range(0, 254), ',+')
+endif
 "}}}
 " Backup/Swapfiles/Undo/Viminfo {{{
 " =====================
