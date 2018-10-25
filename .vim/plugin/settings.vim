@@ -193,5 +193,5 @@ if exists('&bellof')
 	set belloff=all " Never ring the bell for any reason.
 endif
 set expandtab "Always use spaces.
-set mouse= " Disable mouse.
+set mouse=a " Enable mouse.
 " vim: foldenable foldmethod=marker foldlevel=0 ts=4 sts=4 sw=4
