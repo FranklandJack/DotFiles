@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    DefaultPS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -123,3 +123,24 @@ fi
 
 # for fuzzy finder.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Show exit status on failure.
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+        local curr_exit="$?"
+
+        local BRed='\[\e[0;91m\]'
+        local RCol='\[\e[0m\]'
+        PS1=$DefaultPS1
+
+        if [ "$curr_exit" != 0 ]; then
+                PS1="[${BRed}$curr_exit${RCol}]$PS1"
+        fi
+}
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"

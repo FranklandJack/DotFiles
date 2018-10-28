@@ -27,13 +27,13 @@ colorscheme default " Set colorscheme.
 " }}}
 " Plugin Configuration {{{
 " ====================
-" Badwolf {{{
-let g:badwolf_darkgutter=1 " Make gutters darker than the background.
-let g:badwolf_tabline=3 " Make tab line much lighter than the background.
-let g:badwolf_html_link_underline=1 " Turn on HTML link underlining.
-let g:badwolf_css_props_highlight=1 " Turn on CSS properties highlighting.
-colorscheme badwolf " Actually set the colorscheme.
-" }}}
+" Base16 {{{
+" ======
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+"}}}
 " Airline {{{
 " =======
 let g:airline#extensions#tabline#enabled=1 " Enable tabline to be displayed.
@@ -43,7 +43,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved' "  Sets how 
 " }}}
 " Airline Themes {{{
 " ==============
-let g:airline_theme='badwolf'
+let g:airline_theme='base16_default'
 " }}}
 " FZF {{{
 " ===
