@@ -55,3 +55,6 @@
 [submodule ".vim/pack/bundle/start/syntastic"]
 	path = .vim/pack/bundle/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule ".vim/pack/bundle/start/vim-unimpaired"]
+	path = .vim/pack/bundle/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
