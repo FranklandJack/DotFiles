@@ -121,6 +121,7 @@ let g:syntastic_mode_map = {
 " Vim >=8 has native support for adding runtime paths.
 if has('packages')
     packloadall
+    silent! helptags ALL
 else
     " Use pathogen for plug-in loading.
     source $HOME/.vim/pack/bundle/opt/vim-pathogen/autoload /pathogen.vim
