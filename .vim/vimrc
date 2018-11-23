@@ -106,14 +106,14 @@ let g:fmtv_clang_format_file_key = '<C-c>u'
 " }}}
 " Syntastic {{{
 " =========
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 0 "Don't check for errors when writing a buffer to disk, its so slow...
+let g:syntastic_ignore_files = ['\.cpp$', '\.c$', '\.h$', '\.hpp$'] " Don't use for c/c++ development.
+" Default to be in  passive mode, i.e. have to manually check, unless we are 
+" writing python.
+let g:syntastic_mode_map = {
+            \ "mode" : "passive", 
+            \ "active_filetypes" : ["python"],
+            \ "passive_filetypes" :[]}
 " }}}
 " }}}
 " Plugins {{{
