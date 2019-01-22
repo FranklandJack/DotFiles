@@ -9,7 +9,3 @@ nnoremap Y y$
 " Puts vim into very special mode automatically when searching; this escapes
 " all special regex characters automatically.
 nnoremap  / /\v
-" Nerdtree toggle map - toggles nerd tree on and off.
-nnoremap <F2> :NERDTreeToggle<CR>
-" To toggle tagbar on and off.
-nnoremap <F3> :TagbarToggle<CR>
