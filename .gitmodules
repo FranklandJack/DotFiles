@@ -1,12 +1,6 @@
 [submodule ".vim/pack/bundle/opt/vim-pathogen"]
 	path = .vim/pack/bundle/opt/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
-[submodule ".vim/pack/bundle/start/badwolf"]
-	path = .vim/pack/bundle/start/badwolf
-	url = https://github.com/sjl/badwolf.git
-[submodule ".vim/pack/bundle/start/nerdcommenter"]
-	path = .vim/pack/bundle/start/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule ".vim/pack/bundle/start/vim-airline-themes"]
 	path = .vim/pack/bundle/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
@@ -16,18 +10,12 @@
 [submodule ".vim/pack/bundle/start/fzf"]
 	path = .vim/pack/bundle/start/fzf
 	url = https://github.com/junegunn/fzf
-[submodule ".vim/pack/bundle/start/nerdtree"]
-	path = .vim/pack/bundle/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule ".vim/pack/bundle/start/vim-airline"]
 	path = .vim/pack/bundle/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
 [submodule ".vim/pack/bundle/start/fzf.vim"]
 	path = .vim/pack/bundle/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule ".vim/pack/bundle/start/tagbar"]
-	path = .vim/pack/bundle/start/tagbar
-	url = https://github.com/majutsushi/tagbar.git
 [submodule ".vim/pack/bundle/start/vim-fugitive"]
 	path = .vim/pack/bundle/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
@@ -52,9 +40,6 @@
 [submodule ".tmux/plugins/tmux-open"]
 	path = .tmux/plugins/tmux-open
 	url = https://github.com/tmux-plugins/tmux-open
-[submodule ".vim/pack/bundle/start/syntastic"]
-	path = .vim/pack/bundle/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
 [submodule ".vim/pack/bundle/start/vim-unimpaired"]
 	path = .vim/pack/bundle/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
