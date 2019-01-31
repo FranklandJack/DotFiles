@@ -12,6 +12,9 @@ URxvt*colorUL: Yellow
 ! Color of underline itself.
 URxvt*underlineColor: Yellow
 
+! Set color of curosr
+URxvt*cursorColor: #FF0FF
+
 ! Remove the scroll bar.
 URxvt*scrollBar: flase
 
