@@ -7,7 +7,6 @@ set number " Line numbers.
 if exists('+relativenumber')
     set relativenumber " Show relative numbers in gutter.
 endif
-set lazyredraw " Lazy redraw.
 set cursorline " Highlight current line.
 set report=0  " Report number of lines changed for all changes.
 set showmatch " Show matching brackets.

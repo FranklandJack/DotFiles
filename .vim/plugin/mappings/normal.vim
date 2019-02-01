@@ -9,3 +9,8 @@ nnoremap Y y$
 " Puts vim into very special mode automatically when searching; this escapes
 " all special regex characters automatically.
 nnoremap  / /\v
+" YCM mapping to force a full blocking compilation cycle on the file.
+" Calling this command will force YCM to immediately recompile the file and
+" display any new diagnostics it encounters. Recompilation with this command
+" may take a while and furing this time the vim gui will be blocked.
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>

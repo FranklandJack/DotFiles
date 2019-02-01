@@ -87,15 +87,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 " }}}
-" NERD Commenter {{{
-" ==============
-let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default.
-let g:NERDCompactSexyComs = 1 " Use compact syntax for prettified multi-line comments.
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } } " Begin c-sytle comment with double *.
-let g:NERDCommentEmptyLines = 1 " Allow commenting and inverting empty lines (useful when commenting a region).
-let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting.
-let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not.
-" }}}
 " Formative {{{
 " =========
 let g:fmtv_clang_format_nor_key  = '<C-c>' 
@@ -104,16 +95,14 @@ let g:fmtv_clang_format_ins_key  = '<C-c>'
 let g:fmtv_clang_format_line_key = '<C-c>c'  
 let g:fmtv_clang_format_file_key = '<C-c>u' 
 " }}}
-" Syntastic {{{
-" =========
-let g:syntastic_check_on_wq = 0 "Don't check for errors when writing a buffer to disk, its so slow...
-let g:syntastic_ignore_files = ['\.cpp$', '\.c$', '\.h$', '\.hpp$'] " Don't use for c/c++ development.
-" Default to be in  passive mode, i.e. have to manually check, unless we are 
-" writing python.
-let g:syntastic_mode_map = {
-            \ "mode" : "passive", 
-            \ "active_filetypes" : ["python"],
-            \ "passive_filetypes" :[]}
+" YCM {{{
+" ===
+" Populate location list with diagonstic results from when ycm compiles the
+" file (any syntax errors etc.)
+let g:ycm_always_populate_location_list = 1
+" Auto-close preview window (which shows extra information about any possible
+" autocompletions) after a completion string has been selected.
+let g:ycm_autoclose_preview_window_after_completion = 1
 " }}}
 " }}}
 " Plugins {{{
