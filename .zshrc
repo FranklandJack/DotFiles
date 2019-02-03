@@ -1,13 +1,30 @@
 # Set up the prompt
-
-autoload -Uz promptinit
-promptinit
-prompt bart
+source ~/.zsh/prompt.zsh
 
 setopt histignorealldups sharehistory
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+# Use vim keybindings.
+bindkey -v
+# By default, there is a 0.4 second delay after you hit the <ESC> key 
+# and when the mode change is registered, this fixes that.
+export KEYTIMEOUT=1
+
+# Useful keybindings from emacs mode that aren't available by 
+# default with vim mode.
+
+# Use vim cli mode.
+bindkey '^P' up-history
+bindkey '^N' down-history
+
+# Backspze and ^h working even after returning from command mode.
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kell-word
+
+# ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
