@@ -51,3 +51,5 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # for fuzzy finder.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Source zle configurations.
+source ~/.zsh/zle.zsh
