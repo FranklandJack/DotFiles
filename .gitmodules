@@ -46,3 +46,6 @@
 [submodule ".vim/pack/bundle/start/YouCompleteMe"]
 	path = .vim/pack/bundle/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".zsh/zsh-syntax-highlighting"]
+	path = .zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git

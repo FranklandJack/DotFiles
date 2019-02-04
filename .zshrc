@@ -70,3 +70,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # Source zle configurations.
 source ~/.zsh/zle.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
