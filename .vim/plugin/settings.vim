@@ -35,6 +35,11 @@ if exists('+colorcolumn')
     " 'text width'
     let &l:colorcolumn='+' . join(range(0, 254), ',+')
 endif
+
+" Remove banner from netrw file explorer (can be manually enabled with I).
+let g:netrw_banner = 0
+" Default to tree display.
+let g:netrw_liststyle = 3
 "}}}
 " Backup/Swapfiles/Undo/Viminfo {{{
 " =====================

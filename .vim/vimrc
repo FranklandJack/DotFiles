@@ -43,7 +43,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved' "  Sets how 
 " }}}
 " Airline Themes {{{
 " ==============
-let g:airline_theme='base16_summerfruit'
+let g:airline_theme='solarized'
 " }}}
 " FZF {{{
 " ===
