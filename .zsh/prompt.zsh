@@ -1,31 +1,34 @@
 # Sets up prompt, to be sourced in .zshrc at startup.
+# Widgets for displaying mode when using vim mode.
 autoload -Uz promptinit
 promptinit
 
 setopt prompt_subst
 
 autoload colors && colors
-OPEN_BRA="%{$fg_bold[cyan]%}[%{$reset_color%}"
-CLOSE_BRA="%{$fg_bold[cyan]%}]%{$reset_color%}"
-USER_NAME="%B%F{red}%n%b%f"
-WORK_DIR="%{$fg_bold[green]%}%~%{$reset_color%}"
-PRIVLIGE="%{$fg_bold[white]%}%#%{$reset_color%}"
-EXIT_STATUS="%(?..${OPEN_BRA}%B%F{red}%?%b%f${CLOSE_BRA})"
-PROMPT_END="%B%F{white}: %b%f"
 
-PS1="${OPEN_BRA}${USER_NAME}${CLOSE_BRA}${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}"
-# Widgets for displaying mode when using vim mode.
-
-# Function that sets the right side prompt to contain a yellow [NORMAL]
-# if we are in normal mode  and the git branch so it looks like 
-# (left side prompt)                            [NORMAL] [master].
-#
+# Function to change color of variables based on whether in normal 
+# or insert mode.
 function _zle_line_init _zle_keymap_select {
+        # Colors required for this.
         autoload colors && colors
-        # The part of the prompt containing the [NORMAL] if in normal mode.
-        VIM_PROMPT="${OPEN_BRA}%{$fg_bold[yellow]%}NORMAL%{$reset_color%}${CLOSE_BRA}"
-        # Setting the right side prompt.
-        RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+        # Color in insert mode.
+        INSERT_COLOR="%B%F{white}"
+        # Color of normal mode.
+        NORMAL_COLOR="%B%F{yellow}"
+        # Set current color based on mode.
+        CURRENT_COLOR="${${KEYMAP/vicmd/${NORMAL_COLOR}}/(main|viins)/${INSERT_COLOR}}"
+
+        RESET_COLOR="%b%f"
+        OPEN_BRA="%{$fg_bold[cyan]%}[%{$reset_color%}"
+        CLOSE_BRA="%{$fg_bold[cyan]%}]%{$reset_color%}"
+        USER_NAME="%B%F{red}%n%b%f"
+        WORK_DIR="%{$fg_bold[green]%}%1d%{$reset_color%}"
+        PRIVLIGE="${CURRENT_COLOR}%#${RESET_COLOR}"
+        EXIT_STATUS="%(?..${OPEN_BRA}%B%F{red}%?%b%f${CLOSE_BRA})"
+        PROMPT_END="%B%F{white}: %b%f"
+
+        PS1="${OPEN_BRA}${USER_NAME}${CLOSE_BRA}${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}"
         # Redraw the prompt when this function is finished.
         zle reset-prompt
 }

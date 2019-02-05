@@ -1,6 +1,9 @@
 # Set up the prompt
 source ~/.zsh/prompt.zsh
 
+# Enable super glob.
+setopt extended_glob
+
 setopt histignorealldups sharehistory
 
 # Use vim keybindings.
