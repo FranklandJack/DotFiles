@@ -1,11 +1,10 @@
 # Sets up prompt, to be sourced in .zshrc at startup.
 # Widgets for displaying mode when using vim mode.
-autoload -Uz promptinit
-promptinit
+autoload -Uz promptinit && promptinit
 
 setopt prompt_subst
 
-autoload colors && colors
+autoload -Uz colors && colors
 
 # Function to change color of variables based on whether in normal 
 # or insert mode.
