@@ -24,7 +24,16 @@ bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 
 # ctrl-w removed word backwards
-bindkey '^w' backward-kell-word
+bindkey '^w' backward-kill-word
+
+# ctrl-b move back single char.
+bindkey '^b' backward-char
+
+# ctrl-a move to end of line.
+bindkey '^a' end-of-line
+
+# crtl-e move to beginning of line.
+bindkey '^e' beginning-of-line
 
 # ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
@@ -74,3 +83,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # Source zle configurations.
 source ~/.zsh/zle.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#Bind caps lock to esc.
+xmodmap -e 'clear lock' -e 'keycode 0x42 = Escape'

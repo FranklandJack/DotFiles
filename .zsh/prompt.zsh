@@ -9,6 +9,7 @@ setopt prompt_subst
 autoload -Uz colors && colors
 
 # Useful strings to put in prompt.
+# Not all of these are used but I can easily swap to them if I want to.
 CYAN="%B%F{cyan}"
 RED="%B%F{red}"
 YELLOW="%B%F{yellow}"
@@ -22,31 +23,14 @@ RESET_COLOR="%b%f"
 OPEN_BRA="${CYAN}[% ${RESET_COLOR}"
 CLOSE_BRA="${CYAN}]% ${RESET_COLOR}"
 
+TIME="0"
+TIMER='${OPEN_BRA}${RED}${TIME}${RESET_COLOR}${CLOSE_BRA}'
 USER_NAME="${RED}%n${RESET_COLOR}"
 WORK_DIR="${GREEN}%1d${RESET_COLOR}"
 # This value changes color based on the current mode.
 PRIVLIGE='${CURRENT_COLOR}%#${RESET_COLOR}'
 EXIT_STATUS="%(?..${OPEN_BRA}${RED}%?${RESET_COLOR}${CLOSE_BRA})"
 PROMPT_END="${WHITE}: ${RESET_COLOR}"
-
-# For VC options.
-autoload -Uz vcs_info
-# Enable this for git only.
-zstyle ':vcs_info:*' enable git
-# Just display the branch name in the prompt.
-zstyle ':vcs_info:git*' formats  "%B%F{yellow}%b%f"
-# This function gets called before each prompt.
-# It is not executed simplt because the command line is redrawn.
-precmd() {
-    vcs_info
-}
-
-BRANCH='${GREY}${vcs_info_msg_0_}$RESET_COLOR'
-
-# The Prompt.
-PS1=${OPEN_BRA}${USER_NAME}${CLOSE_BRA}${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}
-# Remove any RS prompt.
-RPS1=
 
 # Function to change color of variables based on whether in normal 
 # or insert mode.
@@ -73,3 +57,38 @@ function _zle_line_init _zle_keymap_select {
 # This can be used for detecting switches between the vi command (vicmd) and insert (usually main) keymaps.
 zle -N zle-line-init  _zle_line_init
 zle -N zle-keymap-select _zle_keymap_select
+
+# For VC options.
+autoload -Uz vcs_info
+# Enable this for git only.
+zstyle ':vcs_info:*' enable git
+# Just display the branch name in the prompt.
+zstyle ':vcs_info:git*' formats  "%B%F{yellow}%b%f"
+
+BRANCH='${GREY}${vcs_info_msg_0_}$RESET_COLOR'
+
+
+# This function gets called before any command is executed.
+function preexec() {
+        timer=${timer:-$SECONDS}
+}
+
+# This function gets called before each prompt.
+# It is not executed simplt because the command line is redrawn.
+precmd() {
+    # Updates the vc info variable.
+    vcs_info
+
+    if [ $timer ]; then
+            timer_show=$(($SECONDS - $timer))
+            TIME=$timer_show
+            unset timer
+    fi
+}
+# For the time of the last command.
+
+# The Prompt.
+PS1=${TIMER}${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}
+# Remove any RS prompt.
+RPS1=
+
