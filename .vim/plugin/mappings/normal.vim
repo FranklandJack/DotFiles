@@ -1,14 +1,12 @@
-" For quicker movement between viewports.
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 " So Y behaves like D and C and yanks to the end of the line without yanking
 " newline character.
 nnoremap Y y$
 " Puts vim into very special mode automatically when searching; this escapes
 " all special regex characters automatically.
 nnoremap  / /\v
+
+
+" Paired mappings
 " Place a new line above the current one without entering insert mode (stolen
 " from tpopes unimpaired plugin)
 nnoremap [<leader> m`O<Esc>``
@@ -18,7 +16,14 @@ nnoremap ]<leader> m`o<Esc>``
 " Enable/disable spell mode (also taken from vim-unimpaired).
 nnoremap [os :set spell<CR>
 nnoremap ]os :set spell!<CR>
+" Quicfix mappings (takes a count)
+nnoremap [q :<C-U> v:count cprevious<CR>
+nnoremap ]q :<C-U> v:count cnext<CR>
+" Location list mappings (takes a count)
+nnoremap [l :<C-U> v:count lprevious<CR>
+nnoremap ]l :<C-U> v:count lnext<CR>
 
+" Plugin specific mappings
 " YCM mapping to force a full blocking compilation cycle on the file.
 " Calling this command will force YCM to immediately recompile the file and
 " display any new diagnostics it encounters. Recompilation with this command
