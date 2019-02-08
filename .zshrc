@@ -83,6 +83,3 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # Source zle configurations.
 source ~/.zsh/zle.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-#Bind caps lock to esc.
-xmodmap -e 'clear lock' -e 'keycode 0x42 = Escape'

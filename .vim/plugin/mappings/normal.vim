@@ -14,3 +14,10 @@ nnoremap  / /\v
 " display any new diagnostics it encounters. Recompilation with this command
 " may take a while and furing this time the vim gui will be blocked.
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+" YCM mapping to GoTo whatever is under the cursor, the meaning of this
+" command depends on the context, there are more specific versions of this
+" function for when this doesn't work.
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+" YCM mapping to fix whatever compilation error is currently detected on the
+" line.
+nnoremap <leader>fi :YcmCompleter FixIt<CR>
