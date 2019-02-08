@@ -17,11 +17,11 @@ nnoremap ]<leader> m`o<Esc>``
 nnoremap [os :set spell<CR>
 nnoremap ]os :set spell!<CR>
 " Quicfix mappings (takes a count)
-nnoremap [q :<C-U> v:count cprevious<CR>
-nnoremap ]q :<C-U> v:count cnext<CR>
+nnoremap [q :<C-U> execute v:count . "cprevious"<CR>
+nnoremap ]q :<C-U> execute v:count . "cnext"<CR>
 " Location list mappings (takes a count)
-nnoremap [l :<C-U> v:count lprevious<CR>
-nnoremap ]l :<C-U> v:count lnext<CR>
+nnoremap [l :<C-U> execute v:count . "lprevious"<CR>
+nnoremap ]l :<C-U> execute v:count . "lnext"<CR>
 
 " Plugin specific mappings
 " YCM mapping to force a full blocking compilation cycle on the file.
