@@ -88,7 +88,7 @@ precmd() {
 # For the time of the last command.
 
 # The Prompt.
-PS1=${TIMER}${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}
+PS1=${OPEN_BRA}${WORK_DIR}${CLOSE_BRA}${EXIT_STATUS}${OPEN_BRA}${PRIVLIGE}${CLOSE_BRA}${PROMPT_END}
 # Remove any RS prompt.
 RPS1=
 
