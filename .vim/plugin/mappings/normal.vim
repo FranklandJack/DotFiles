@@ -9,6 +9,16 @@ nnoremap Y y$
 " Puts vim into very special mode automatically when searching; this escapes
 " all special regex characters automatically.
 nnoremap  / /\v
+" Place a new line above the current one without entering insert mode (stolen
+" from tpopes unimpaired plugin)
+nnoremap [<leader> m`O<Esc>``
+" Place a new line below the current one without entering insert mode (stolen
+" from tpopes unimpaired plugin)
+nnoremap ]<leader> m`o<Esc>``
+" Enable/disable spell mode (also taken from vim-unimpaired).
+nnoremap [os :set spell<CR>
+nnoremap ]os :set spell!<CR>
+
 " YCM mapping to force a full blocking compilation cycle on the file.
 " Calling this command will force YCM to immediately recompile the file and
 " display any new diagnostics it encounters. Recompilation with this command
