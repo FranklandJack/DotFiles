@@ -37,6 +37,10 @@ bindkey '^e' beginning-of-line
 # ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
 
+# ctrl-o clear terminal (like ctrl-l but that is now mapped for moving around
+# vim and tmux)
+bindkey '^o' clear-screen
+
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
