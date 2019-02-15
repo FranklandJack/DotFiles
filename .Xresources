@@ -7,10 +7,6 @@ URxvt*termName: xterm-256color
 URxvt*background: Black
 ! Make standard text white
 URxvt*foreground: White
-! Color of underlined words.
-URxvt*colorUL: Yellow
-! Color of underline itself.
-URxvt*underlineColor: Yellow
 
 ! Set color of curosr
 URxvt*cursorColor: #FF00FF
