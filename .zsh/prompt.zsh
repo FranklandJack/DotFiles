@@ -16,8 +16,10 @@ YELLOW="%B%F{yellow}"
 WHITE="%B%F{white}"
 GREEN="%B%F{green}"
 GREY="%B%F{grey}"
+MAG="%B%F{magenta}"
+BLUE="%B%F{blue}"
 # This is the color that indicates whether in VI mode.
-CURRENT_COLOR=${WHITE}
+CURRENT_COLOR=${GREEN}
 RESET_COLOR="%b%f"
 
 OPEN_BRA="${CYAN}[% ${RESET_COLOR}"
@@ -26,7 +28,7 @@ CLOSE_BRA="${CYAN}]% ${RESET_COLOR}"
 TIME="0"
 TIMER='${OPEN_BRA}${RED}${TIME}${RESET_COLOR}${CLOSE_BRA}'
 USER_NAME="${RED}%n${RESET_COLOR}"
-WORK_DIR="${GREEN}%1d${RESET_COLOR}"
+WORK_DIR="${MAG}%1d${RESET_COLOR}"
 # This value changes color based on the current mode.
 PRIVLIGE='${CURRENT_COLOR}%#${RESET_COLOR}'
 EXIT_STATUS="%(?..${OPEN_BRA}${RED}%?${RESET_COLOR}${CLOSE_BRA})"
@@ -38,9 +40,9 @@ function _zle_line_init _zle_keymap_select {
         # Colors required for this.
         autoload colors && colors
         # Color in insert mode.
-        INSERT_COLOR="%B%F{white}"
+        INSERT_COLOR="%B%F{green}"
         # Color of normal mode.
-        NORMAL_COLOR="%B%F{yellow}"
+        NORMAL_COLOR="%B%F{red}"
         # Set current color based on mode.
         CURRENT_COLOR="${${KEYMAP/vicmd/${NORMAL_COLOR}}/(main|viins)/${INSERT_COLOR}}"
         # Redraw the prompt when this function is finished.
