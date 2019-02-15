@@ -5,6 +5,7 @@ nnoremap Y y$
 " all special regex characters automatically.
 nnoremap  / /\v
 
+nnoremap - :Explore<CR>
 
 " Paired mappings
 " Place a new line above the current one without entering insert mode (stolen
