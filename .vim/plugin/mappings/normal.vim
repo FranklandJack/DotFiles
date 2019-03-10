@@ -37,3 +37,7 @@ nnoremap <leader>gt :YcmCompleter GoTo<CR>
 " YCM mapping to fix whatever compilation error is currently detected on the
 " line.
 nnoremap <leader>fi :YcmCompleter FixIt<CR>
+
+" Insert new line at cursor position and change to insert mode.
+nnoremap <leader>i i<CR>
+nnoremap <leader>a a<CR>
