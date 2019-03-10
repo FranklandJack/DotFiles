@@ -48,6 +48,7 @@ let g:airline_theme='solarized'
 " FZF {{{
 " ===
 " Usage mappings.
+set rtp+=~/.fzf
 nnoremap <C-p> :Files<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader>pg :GFiles<CR>
