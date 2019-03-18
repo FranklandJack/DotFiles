@@ -26,3 +26,10 @@ alias pdw='pwd' # and this...
 alias t=tmux # Launch tmux more quickly.
 alias v=vim # Launch vim more quickly.
 alias h=history # Quicker history access.
+
+# Git shortcuts
+alias stash='git stash'
+alias show='git show'
+
+# vim like exit commands.
+alias :q='exit'
