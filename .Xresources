@@ -15,10 +15,10 @@ URxvt*cursorColor: #FF00FF
 URxvt*scrollBar: flase
 
 ! Set the fonts.
-URxvt*font: xft:Hermit:medium:size=12:antialiasing=true
-URxvt*boldFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
-URxvt*italicFont: xft:Hermit:medium:size=12:antialiasing=true:style=medium
-URxvt*boldItalicFont: xft:Hermit:bold:size=12:antialiasing=true:style=medium
+URxvt*font: xft:Hermit:medium:size=11:antialiasing=true
+URxvt*boldFont: xft:Hermit:bold:size=11:antialiasing=true:style=medium
+URxvt*italicFont: xft:Hermit:medium:size=11:antialiasing=true:style=medium
+URxvt*boldItalicFont: xft:Hermit:bold:size=11:antialiasing=true:style=medium
 ! This sets the spacing between unicode characters and is required to 
 ! render unicode characters.
 URxvt*letterSpace: 2
