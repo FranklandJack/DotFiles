@@ -9,6 +9,13 @@ if &compatible
   set nocompatible
 endif
 " }}}
+" Vimscript file settings {{{
+" =======================
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
 " Filetype indentation + syntax {{{
 " ====================
  " Automatic, language-dependent indentation, syntax coloring and other
