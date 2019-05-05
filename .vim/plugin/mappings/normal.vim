@@ -5,6 +5,7 @@ nnoremap Y y$
 " all special regex characters automatically.
 nnoremap  / /\v
 nnoremap  ? ?\v
+nnoremap K :nohlsearch<CR>
 
 nnoremap - :Explore<CR>
 
