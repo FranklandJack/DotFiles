@@ -18,7 +18,7 @@ nnoremap [<leader> m`O<Esc>``
 nnoremap ]<leader> m`o<Esc>``
 " Enable/disable spell mode (also taken from vim-unimpaired).
 nnoremap [os :set spell<CR>
-nnoremap ]os :set spell!<CR>
+nnoremap ]os :set nospell<CR>
 " Quicfix mappings (takes a count)
 nnoremap [q :<C-U> execute v:count . "cprevious"<CR>
 nnoremap ]q :<C-U> execute v:count . "cnext"<CR>
