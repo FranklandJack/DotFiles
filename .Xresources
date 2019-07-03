@@ -30,3 +30,6 @@ URxvt*cursorBlink: true
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+
+! Enable changing font size on the fly
+URxvt.perl-ext-common: ...,font-size
