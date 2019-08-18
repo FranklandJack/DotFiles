@@ -9,8 +9,10 @@ IMAGE="$(mktemp).png"
 scrot -z "$IMAGE"
 
 # Transform the image.
-EFFECT=(-scale 25% -scale 400%)
-convert "$IMAGE" "${EFFECT[@]}" "$IMAGE"
+PIXELATE=(-scale 25% -scale 400%)
+PAINT=(-paint 0.0025)
+HUE=(-level 0%,100%,0.6)
+convert "$IMAGE" "${HUE[@]}"  "${PIXELATE[@]}" "$IMAGE"
 
 # Call the i3 lock.
 i3lock -i "$IMAGE" -u
