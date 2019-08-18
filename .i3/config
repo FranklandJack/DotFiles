@@ -27,7 +27,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # lock and suspend
-bindsym $alt+Control+l exec i3lock-fancy -p -g
+bindsym $alt+Control+l exec bash ~/.bash/scripts/lock.sh
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
