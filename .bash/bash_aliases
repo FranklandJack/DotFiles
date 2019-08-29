@@ -27,6 +27,7 @@ alias t=tmux # Launch tmux more quickly.
 alias v=vim # Launch vim more quickly.
 alias vom=vim # Typo..
 alias nonja=ninja # As above...
+alias gerp=grep # ...
 alias h=history # Quicker history access.
 
 # Git shortcuts
