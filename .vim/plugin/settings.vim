@@ -179,6 +179,7 @@ endif
 set hlsearch        " Highlight matches.
 " Search results should be white and underline, none of that gross yellow.
 highlight Search ctermbg=black ctermfg=white cterm=underline
+highlight IncSearch ctermbg=black ctermfg=white cterm=underline
 set incsearch       " Highlight matches as we type.
 set ignorecase      " Ignore case when searching.
 set smartcase       " Don't ignore case when different cases searched for.
