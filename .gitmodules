@@ -46,9 +46,9 @@
 [submodule ".vim/pack/bundle/start/fzf.vim"]
 	path = .vim/pack/bundle/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
-[submodule "/home/jack/.zsh/zsh-autosuggestions"]
-	path = /home/jack/.zsh/zsh-autosuggestions
+[submodule ".zsh/zsh-autosuggestions"]
+	path = .zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "/home/jack/.fzf"]
-	path = /home/jack/.fzf
+[submodule ".fzf"]
+	path = .fzf
 	url = https://github.com/junegunn/fzf.git
