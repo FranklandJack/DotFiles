@@ -88,5 +88,8 @@ source ~/.zsh/zle.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Wont auto-suggest beyond 20 characters.
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+
 # For ccache
 export PATH=/usr/libccache:$PATH
