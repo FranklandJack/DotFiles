@@ -49,3 +49,6 @@
 [submodule "/home/jack/.zsh/zsh-autosuggestions"]
 	path = /home/jack/.zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "/home/jack/.fzf"]
+	path = /home/jack/.fzf
+	url = https://github.com/junegunn/fzf.git
