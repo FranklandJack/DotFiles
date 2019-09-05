@@ -90,6 +90,8 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Wont auto-suggest beyond 20 characters.
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+bindkey '^i' autosuggest-accept
+bindkey '^u' autosuggest-execute
 
 # For ccache
 export PATH=/usr/libccache:$PATH
