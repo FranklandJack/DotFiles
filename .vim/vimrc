@@ -110,11 +110,12 @@ let g:fzf_colors =
 " }}}
 " Formative {{{
 " =========
-let g:fmtv_clang_format_nor_key  = '<C-c>' 
-let g:fmtv_clang_format_vis_key  = '<C-c>'  
-let g:fmtv_clang_format_ins_key  = '<C-c>'  
-let g:fmtv_clang_format_line_key = '<C-c>c'  
-let g:fmtv_clang_format_file_key = '<C-c>u' 
+" Remove default mappings.
+let g:fmtv_no_mappings = 1
+nmap <C-c> <Plug>FormativeNor
+vmap <C-c> <Plug>FormativeVis
+imap <C-c> <Plug>FormativeIns
+
 " }}}
 " YCM {{{
 " ===
