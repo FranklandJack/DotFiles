@@ -86,7 +86,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # Source zle configurations.
 source ~/.zsh/zle.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# zpty is required for autocomplete to suggest what tab complete would suggest.
+zmodload zsh/zpty 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Auto-complete configuration.
+
+# Completion strategy suggestion order.
+ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd history)
 
 # Wont auto-suggest beyond 20 characters.
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
