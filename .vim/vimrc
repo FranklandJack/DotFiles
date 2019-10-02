@@ -63,7 +63,9 @@ endif
 " }}}
 " Airline Themes {{{
 " ==============
-let g:airline_theme='solarized'
+let g:airline_theme='base16_vim'
+let g:airline_base16_improved_contrast = 1
+let g:airline_base16_monotone = 1
 " }}}
 " FZF {{{
 " ===
