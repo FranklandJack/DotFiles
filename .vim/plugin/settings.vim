@@ -45,79 +45,79 @@ let g:netrw_liststyle = 3
 " =====================
 " Backup files {{{
 " ============
-" 
+"
 if exists('$SUDO_USER') " Check whether we are editing as sudoer.
-	set nobackup " If we are don't creat backups
-	set	nowritebackup " or backups during writing to a file since they won't be able to be opened by non sudoers.
+ set nobackup " If we are don't creat backups
+ set nowritebackup " or backups during writing to a file since they won't be able to be opened by non sudoers.
 else
-	" Back up directories are appended to list in the following order and the
-	" first on found is used.
-	" Keep backup files out of the way.
-	set backupdir=~/local/.vim/tmp/backup//
-	set backupdir+=~/.vim/tmp/backup//
-	set backupdir+=. " Use pwd as last resort so backups stay out of the way.
-	set backup
-	set writebackup
-	set backupcopy=yes
+    " Back up directories are appended to list in the following order and the
+    " first on found is used.
+    " Keep backup files out of the way.
+    set backupdir=~/local/.vim/tmp/backup//
+    set backupdir+=~/.vim/tmp/backup//
+    set backupdir+=. " Use pwd as last resort so backups stay out of the way.
+    set backup
+    set writebackup
+    set backupcopy=yes
 endif
 " }}}
 " Swapfiles {{{
 " =========
 if exists('$SUDO_USER')
-	set noswapfile
+ set noswapfile
 else
-	" Keep swapfiles out of the way.
-	set directory=~/local/.vim/tmp/swap//
-	set directory+=~/.vim/tmp/swap//
-	set directory+=.
-	" Note: // avoids naming conflicts by using absolute paths.
+    " Keep swapfiles out of the way.
+    set directory=~/local/.vim/tmp/swap//
+    set directory+=~/.vim/tmp/swap//
+    set directory+=.
+    " Note: // avoids naming conflicts by using absolute paths.
 endif
 " }}}
 " Undo {{{
 " ====
 if has('persistent_undo')
-	if exists('$SUDO_USER')
-		set noundofile
-	else
-		set undodir=~/local/.vim/tmp/undo//
-		set undodir+=~/.vim/tmp/undo//
-		set undodir+=.
-		set undofile " Actually use undo files.
-	endif
+    if exists('$SUDO_USER')
+        set noundofile
+    else
+        set undodir=~/local/.vim/tmp/undo//
+        set undodir+=~/.vim/tmp/undo//
+        set undodir+=.
+        set undofile " Actually use undo files.
+    endif
 endif
 " }}}
 " Viminfo {{{
 " =======
 if has('viminfo')
-	if exists('$SUDO_USER')
-		set viminfo= " For sudors don't create viminfos for same reasons as above (can't be accessed after by normal users)
-	else 
-		if isdirectory('~/local/.vim/tmp')
-			set viminfo+=n~/local/.vim/tmp/viminfo// "n is the name of the vim info file.
-		else
-			set viminfo+=n~/.vim/tmp/viminfo//
-		endif
+    if exists('$SUDO_USER')
+        set viminfo= " For sudors don't create viminfos for same reasons as above (can't be accessed after by normal users)
+    else
+        if isdirectory('~/local/.vim/tmp')
+            set viminfo+=n~/local/.vim/tmp/viminfo// "n is the name of the vim info file.
+        else
+            set viminfo+=n~/.vim/tmp/viminfo//
+        endif
 
-		" Check if it is possible to read the viminfo file and display a
-		" warning if it isn't.
-		if !empty(glob('~/.vim/tmp/viminfo'))
-			if !filereadble(expand('~/.vim/tmp/viminfo))
-				echoerr 'warning: ~/.vim/tmp/viminfo exists but is not readable'
-			endif
-		endif
-	endif
+        " Check if it is possible to read the viminfo file and display a
+        " warning if it isn't.
+        if !empty(glob('~/.vim/tmp/viminfo'))
+            if !filereadble(expand('~/.vim/tmp/viminfo))
+                echoerr 'warning: ~/.vim/tmp/viminfo exists but is not readable'
+            endif
+        endif
+    endif
 endif
-		
+
 " }}}
 " Mksession {{{
 " =========
 if has('mksession') "mksession files are used to save the state of sessions e.g. viewports and tabs.
-	if isdirectory('~/local/.vim/tmp')
-		set viewdir=~/local/.vim/tmp/view//
-	else
-		set viewdir=~/.vim/tmp/view//
-	endif
-	set viewoptions=cursor,folds
+    if isdirectory('~/local/.vim/tmp')
+        set viewdir=~/local/.vim/tmp/view//
+    else
+        set viewdir=~/.vim/tmp/view//
+    endif
+    set viewoptions=cursor,folds
 endif
 " }}}
 " }}}
@@ -143,10 +143,10 @@ set autoread " If file changed outside vim reload it.
 " Folding {{{
 " =======
 if has('folding')
-	set foldenable               " Enable folding.
-	set foldlevelstart=0         " Fold everything upon opening a file.
-	set foldnestmax=10           " 10 nested folds max.
-	set foldmethod=syntax        " Fold based on syntax (for C++)
+    set foldenable               " Enable folding.
+    set foldlevelstart=0         " Fold everything upon opening a file.
+    set foldnestmax=10           " 10 nested folds max.
+    set foldmethod=syntax        " Fold based on syntax (for C++)
 endif
 " }}}
 " History {{{
@@ -160,7 +160,7 @@ set autoindent " Maintain indent of current line.
 " Modelines {{{
 " =========
 " Debian, Ubuntu, Gentoo, OSX, etc. by default disable modelines for security reasons.
-set modeline 
+set modeline
 set modelines=5
 " }}}
 " Scrolling {{{
@@ -168,10 +168,10 @@ set modelines=5
 set scrolloff=5            " Keep a minimum of 5 line below the cursor.
 set sidescrolloff=5        " Keep a minimum of 5 columns left of the cursor.
 if has('linebreak')
-	set breakindent " Indent wrapped lines to match indentation of line they wrapped from.
-	if exists('&breakindentopt')
-		set breakindentopt=shift:2 " Emphasize broken lines by indenting them.
-	endif
+    set breakindent " Indent wrapped lines to match indentation of line they wrapped from.
+    if exists('&breakindentopt')
+        set breakindentopt=shift:2 " Emphasize broken lines by indenting them.
+    endif
 endif
 " }}}
 " Searching {{{
