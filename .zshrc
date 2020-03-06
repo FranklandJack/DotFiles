@@ -105,9 +105,3 @@ fi
 
 # For ccache
 export PATH=/usr/libccache:$PATH
-
-# Get color support for 'less'
-export LESS="--RAW-CONTROL-CHARS"
-
-# Use colors for less, man, etc.
-[[ -f ~/.LESS_TERMCAP ]] && . ~/.LESS_TERMCAP
