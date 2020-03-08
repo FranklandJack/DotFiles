@@ -1,0 +1,2 @@
+# Ignore those files Mac OS generates.
+*.DS_Store

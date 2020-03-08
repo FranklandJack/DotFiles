@@ -3,6 +3,7 @@
 	email = frankland.jack@gmail.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore_global
 [help]
 	autocorrect = 20
 [alias]
