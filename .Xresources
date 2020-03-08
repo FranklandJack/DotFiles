@@ -9,7 +9,7 @@ URxvt*background: Black
 URxvt*foreground: White
 
 ! Set color of curosr
-URxvt*cursorColor: #FF00FF
+URxvt*cursorColor: White
 
 ! Remove the scroll bar.
 URxvt*scrollBar: flase

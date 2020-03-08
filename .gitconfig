@@ -1,0 +1,14 @@
+[user]
+	name = Jack
+	email = jack@codeplay.com
+[core]
+	editor = vim
+[help]
+	autocorrect = 20
+[alias]
+	co = checkout
+	tree = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[include]
+        path = ~/.gitconfig.aliases
+[push]
+	default = simple
