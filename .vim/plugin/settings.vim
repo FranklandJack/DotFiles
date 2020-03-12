@@ -140,15 +140,6 @@ set backspace=indent,eol,start " Allow backspacing over autoindent, line breaks 
 " ============
 set autoread " If file changed outside vim reload it.
 "}}}
-" Folding {{{
-" =======
-if has('folding')
-    set foldenable               " Enable folding.
-    set foldlevelstart=0         " Fold everything upon opening a file.
-    set foldnestmax=10           " 10 nested folds max.
-    set foldmethod=syntax        " Fold based on syntax (for C++)
-endif
-" }}}
 " History {{{
 " =======
 set history=1000 " Set length of command history.
