@@ -127,6 +127,8 @@ let g:ycm_always_populate_location_list = 1
 " Auto-close preview window (which shows extra information about any possible
 " autocompletions) after a completion string has been selected.
 let g:ycm_autoclose_preview_window_after_completion = 1
+" Disable clangd
+let g:ycm_use_clangd = 0
 " }}}
 " }}}
 " Plugins {{{
