@@ -119,6 +119,15 @@ nmap <C-c> <Plug>FormativeNor
 vmap <C-c> <Plug>FormativeVis
 imap <C-c> <Plug>FormativeIns
 " }}}
+" YCM {{{
+" ===
+" Populate location list with diagonstic results from when ycm compiles the
+" file (any syntax errors etc.)
+let g:ycm_always_populate_location_list = 1
+" Auto-close preview window (which shows extra information about any possible
+" autocompletions) after a completion string has been selected.
+let g:ycm_autoclose_preview_window_after_completion = 1
+" }}}
 " }}}
 " Plugins {{{
 " =======
