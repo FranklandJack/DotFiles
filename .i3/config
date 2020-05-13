@@ -22,6 +22,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+# start an internet (firefox for the time being).
+bindsym $mod+i exec firefox
 
 # kill focused window
 bindsym $mod+Shift+q kill
