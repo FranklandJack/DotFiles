@@ -85,7 +85,7 @@ omap <leader><tab> <plug>(fzf-maps-o)
 " Insert mode completion
 imap <c-x><C-k> <plug>(fzf-complete-word)
 imap <c-x><C-f> <plug>(fzf-complete-path)
-imap <c-x><C-j> <plug>(fzf-complete-file-ag)
+imap <c-x><C-j> <plug>(fzf-complete-file)
 imap <c-x><C-l> <plug>(fzf-complete-line)
 " This is the default extra key bindings
 let g:fzf_action = {
