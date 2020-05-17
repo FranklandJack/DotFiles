@@ -137,3 +137,17 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "Up", function()
   f.h = max.h / 2
   win:setFrame(f)
 end)
+
+-- Make selected window occupy whole of screen.
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
+  local win = hs.window.focusedWindow()
+  local f = win:frame()
+  local screen = win:screen()
+  local max = screen:frame()
+
+  f.x = max.x
+  f.y = max.y
+  f.w = max.w
+  f.h = max.h
+  win:setFrame(f)
+end)
