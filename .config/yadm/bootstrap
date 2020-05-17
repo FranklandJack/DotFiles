@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+# Initialize submodules.
+echo "Init Submodules"
+yadm submodule update --recursive --init
+
+# Run system specific bootstrapping scripts.
+system_type=$(uname -s)
+echo "Platform detected: " $system_type
+if [ "$system_type" = "Darwin"]; then
+  echo "Running max osx bootstrap"
+  ./.bootstrap/mac.sh
+else
+  echo "Bootsrapping not supported on this platform"
+fi
