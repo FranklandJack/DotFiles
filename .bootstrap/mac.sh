@@ -10,7 +10,7 @@ xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Install packages.
-brew install yadm tmux lastpass-cli cmake ninja macvim clang-format gpg base16 fd ffmpeg
+brew install yadm tmux lastpass-cli cmake ninja macvim clang-format gpg base16 fd ffmpeg tldr
 
 # Install precompiled macOS binaries (.app programs).
 brew cask install firefox iterm2 virtualbox karabiner-elements hammerspoon ableton-live-standard musescore surge-synthesizer whatsapp vlc soulseek
