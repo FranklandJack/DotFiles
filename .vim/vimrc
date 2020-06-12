@@ -139,6 +139,11 @@ let g:ycm_warning_symbol = '✗'
 nnoremap <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <leader>fi :YcmCompleter FixIt<CR>
 " }}}
+" Vim-Spirv {{{
+" =========
+" Specify the value of the SpirvCurrentID highlight group.
+let g:spirv_current_id_highlight = 'term=bold cterm=bold gui=bold'
+" }}}
 " }}}
 " Plugins {{{
 " =======
