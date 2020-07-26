@@ -13,7 +13,7 @@ xcode-select --install
 brew install yadm tmux lastpass-cli cmake ninja macvim clang-format gpg base16 fd ffmpeg tldr
 
 # Install precompiled macOS binaries (.app programs).
-brew cask install firefox iterm2 virtualbox karabiner-elements hammerspoon ableton-live-standard musescore surge-synthesizer whatsapp vlc soulseek mactex discord
+brew cask install firefox iterm2 virtualbox karabiner-elements hammerspoon ableton-live-standard musescore surge-synthesizer whatsapp vlc soulseek mactex discord zulip
 
 # Install fzf (TODO: Consider switching to the package on
 # platforms that support it)
