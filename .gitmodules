@@ -52,9 +52,6 @@
 [submodule ".vim/pack/bundle/start/vim-opencl"]
 	path = .vim/pack/bundle/start/vim-opencl
 	url = https://github.com/petRUShka/vim-opencl.git
-[submodule ".vim/pack/bundle/start/YouCompleteMe"]
-	path = .vim/pack/bundle/start/YouCompleteMe
-	url = https://github.com/ycm-core/YouCompleteMe.git
 [submodule ".vim/pack/bundle/start/vim-spirv"]
 	path = .vim/pack/bundle/start/vim-spirv
 	url = git@github.com:kbenzie/vim-spirv.git
