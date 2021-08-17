@@ -2,7 +2,7 @@
 	name = Jack
 	email = frankland.jack@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore_global
 [help]
 	autocorrect = 20

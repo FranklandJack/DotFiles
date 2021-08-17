@@ -53,8 +53,7 @@ else
     " Back up directories are appended to list in the following order and the
     " first on found is used.
     " Keep backup files out of the way.
-    set backupdir=~/local/.vim/tmp/backup//
-    set backupdir+=~/.vim/tmp/backup//
+    set backupdir=~/.vim/tmp/backup//
     set backupdir+=. " Use pwd as last resort so backups stay out of the way.
     set backup
     set writebackup

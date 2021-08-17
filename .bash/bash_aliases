@@ -21,6 +21,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     alias egrep='egrep --color=auto'
 fi
 
+# use neovim not vim
+alias vim=nvim
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
