@@ -124,6 +124,13 @@ imap <C-c> <Plug>FormativeIns
 " Specify the value of the SpirvCurrentID highlight group.
 let g:spirv_current_id_highlight = 'term=bold cterm=bold gui=bold'
 " }}}
+" COC {{{
+" ===
+" coc.nvim Conqueror of Completion
+let g:coc_global_extensions = [
+\   'coc-clangd',
+\]
+" }}}
 " }}}
 " Plugins {{{
 " =======

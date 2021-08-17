@@ -26,20 +26,17 @@ nnoremap ]q :<C-U> execute v:count . "cnext"<CR>
 nnoremap [l :<C-U> execute v:count . "lprevious"<CR>
 nnoremap ]l :<C-U> execute v:count . "lnext"<CR>
 
-" Plugin specific mappings
-" YCM mapping to force a full blocking compilation cycle on the file.
-" Calling this command will force YCM to immediately recompile the file and
-" display any new diagnostics it encounters. Recompilation with this command
-" may take a while and furing this time the vim gui will be blocked.
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-" YCM mapping to GoTo whatever is under the cursor, the meaning of this
-" command depends on the context, there are more specific versions of this
-" function for when this doesn't work.
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-" YCM mapping to fix whatever compilation error is currently detected on the
-" line.
-nnoremap <leader>fi :YcmCompleter FixIt<CR>
-
 " Insert new line at cursor position and change to insert mode.
 nnoremap <leader>i i<CR>
 nnoremap <leader>a a<CR>
+
+" coc.nvim
+nmap <silent> <leader>fi <Plug>(coc-fix-current)
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gt <Plug>(coc-type-definition)
+nmap <silent> <leader>sd <Plug>(coc-diagnostic-info)
+nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> <leader>fd <Plug>(coc-rename)
+nmap <silent> K :call do#show_documentation()<CR>
+nmap <silent> <leader><C-n> <Plug>(coc-diagnostic-next)
+nmap <silent> <leader><C-p> <Plug>(coc-diagnostic-prev)
