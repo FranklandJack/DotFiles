@@ -47,3 +47,6 @@ alias show='git show'
 
 # vim like exit commands.
 alias :q='exit'
+
+# Draw a red line accross the terminal
+alias line='numcols=$(tput cols);echo -ne "\033[0;31m╠"; printf "%0.s═" {1..$(( numcols - 3 ))}; echo -ne "╣\033[0m \n";'
