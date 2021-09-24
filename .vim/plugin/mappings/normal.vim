@@ -37,6 +37,6 @@ nmap <silent> <leader>gt <Plug>(coc-type-definition)
 nmap <silent> <leader>sd <Plug>(coc-diagnostic-info)
 nmap <silent> <leader>gr <Plug>(coc-references)
 nmap <silent> <leader>fd <Plug>(coc-rename)
-nmap <silent> K :call do#show_documentation()<CR>
+nmap <silent> <leader>k :call do#show_documentation()<CR>
 nmap <silent> <leader><C-n> <Plug>(coc-diagnostic-next)
 nmap <silent> <leader><C-p> <Plug>(coc-diagnostic-prev)
