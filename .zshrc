@@ -107,6 +107,6 @@ if [[ "${terminfo[kcbt]}" != "" ]]; then
 fi
 
 # For ccache
-export PATH=/usr/libccache:$PATH
+export PATH=/usr/lib/ccache:$PATH
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
