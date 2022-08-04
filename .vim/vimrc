@@ -130,6 +130,8 @@ let g:spirv_current_id_highlight = 'term=bold cterm=bold gui=bold'
 let g:coc_global_extensions = [
 \   'coc-clangd',
 \]
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
 " }}}
 " }}}
 " Plugins {{{

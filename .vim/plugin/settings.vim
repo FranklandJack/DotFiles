@@ -1,4 +1,5 @@
 let mapleader=" " " Set leader key to be spacebar.
+let updatetime=300 "Set time used by CursorHold to 300ms
 " UI {{{
 " ==
 set ruler " Show Ruler.
