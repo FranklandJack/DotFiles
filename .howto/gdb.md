@@ -19,7 +19,7 @@ Get help for given command:
 
 Search the help for commands related to `[word]`:
 ```
-(gdb) apropos [word
+(gdb) apropos [word]
 ```
 
 Break on first line of program:
@@ -182,7 +182,7 @@ Disable breakpoint:
 
 Enable breakpoint:
 ```
-(gdb) disable [breakpoint_number]
+(gdb) enable [breakpoint_number]
 ```
 
 Clear breakpoint at specific location:
@@ -202,7 +202,7 @@ Delete breakpoint:
 
 Delete all breakpoints:
 ```
-(gdb) delete
+(gdb) delete breakpoints
 ```
 
 Add hooks to break point to execute when it is hit
