@@ -129,9 +129,21 @@ let g:spirv_current_id_highlight = 'term=bold cterm=bold gui=bold'
 " coc.nvim Conqueror of Completion
 let g:coc_global_extensions = [
 \   'coc-clangd',
+\   'coc-cmake',
+\   'coc-css',
+\   'coc-docker',
+\   'coc-html',
+\   'coc-jedi',
+\   'coc-json',
+\   'coc-marketplace',
+\   'coc-pyright',
+\   'coc-ultisnips',
+\   'coc-vimlsp',
+\   'coc-yaml',
 \]
+highlight link CocMenuSel Todo
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 " }}}
 " }}}
 " Plugins {{{
