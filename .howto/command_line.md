@@ -57,3 +57,9 @@ https://wiki.archlinux.org/title/xrandr
 
 Command line configuration for X. Can be used to set size, orientation,
 relative position etc. of monitor outputs.
+
+# tig
+
+https://jonas.github.io/tig/
+
+ncurses based text-mode interface for git. Very useful for visualizing history in a nice way.
