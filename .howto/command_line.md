@@ -44,3 +44,16 @@ Not strictly command line related. Tiling window manager for linux.
 https://github.com/tmux/tmux/wiki
 
 Terminal multiplexer.
+
+# urxvt
+
+https://wiki.archlinux.org/title/rxvt-unicode
+
+Terminal emulator.
+
+# xrandr
+
+https://wiki.archlinux.org/title/xrandr
+
+Command line configuration for X. Can be used to set size, orientation,
+relative position etc. of monitor outputs.
