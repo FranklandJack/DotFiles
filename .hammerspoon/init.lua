@@ -151,3 +151,7 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
   f.h = max.h
   win:setFrame(f)
 end)
+
+hs.hotkey.bind({"ctrl", "alt"}, "L", function()
+  hs.caffeinate.lockScreen()
+end) 
