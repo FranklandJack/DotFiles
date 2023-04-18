@@ -11,7 +11,6 @@ scrot -z "$IMAGE"
 # Transform the image.
 PIXELATE=(-scale 10% -scale 1000%)
 PAINT=(-paint 0.0025)
-HUE=(-level 100%,100%,0.6)
 convert "$IMAGE" "${HUE[@]}"  "${PIXELATE[@]}" "$IMAGE"
 
 # Call the i3 lock.
