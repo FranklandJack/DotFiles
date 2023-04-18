@@ -145,6 +145,14 @@ highlight link CocMenuSel Todo
 " Highlight the symbol and its references when holding the cursor.
 " autocmd CursorHold * silent call CocActionAsync('highlight')
 " }}}
+" Fugative {{{
+" ========
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '>'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
+"}}}
 " }}}
 " Plugins {{{
 " =======
@@ -163,4 +171,8 @@ endif
 " =====
 set foldlevelstart=99
 "}}}
+" Update Time {{{
+" redraw every 250ms
+set updatetime=250
+" }}}
 " vim: foldenable foldmethod=marker foldlevel=0 ts=4 sts=4 sw=4
