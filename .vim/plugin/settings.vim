@@ -13,7 +13,7 @@ set report=0  " Report number of lines changed for all changes.
 set showmatch " Show matching brackets.
 set noshowmode " Don't show current mode (is shown in airline bar anyway).
 set whichwrap=b,h,l,s,<,>,[,] " Allow <BS>/h/l/<left>,<right>/<space>, to cross line boundries.
-set list " Display whitespace charactes 
+set list " Display whitespace charactes
 set listchars=eol:↩
 set listchars+=tab:⬤●
 set listchars+=trail:◯
