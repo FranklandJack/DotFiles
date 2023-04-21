@@ -73,6 +73,8 @@ let g:airline_base16_monotone = 1
 " Usage mappings.
 set rtp+=~/.fzf
 nnoremap <C-p> :Files<CR>
+nnoremap <C-x><C-p> :Files $HOME/.vim<CR>
+nnoremap <C-g> :Ag<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <leader>pg :GFiles<CR>
 nnoremap <leader>pc :Commits<CR>
