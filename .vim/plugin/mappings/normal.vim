@@ -5,7 +5,7 @@ nnoremap Y y$
 " all special regex characters automatically.
 nnoremap  / /\v
 nnoremap  ? ?\v
-nnoremap K :nohlsearch<CR>
+nnoremap <silent> K :nohlsearch<CR>
 
 nnoremap - :Explore<CR>
 
@@ -29,6 +29,9 @@ nnoremap ]l :<C-U> execute v:count . "lnext"<CR>
 " Insert new line at cursor position and change to insert mode.
 nnoremap <leader>i i<CR>
 nnoremap <leader>a a<CR>
+
+" Resize a horizontal split to remove empty lines following end of file.
+nnoremap <silent> <leader>rs :execute 'resize'.line('$')<CR>
 
 " coc.nvim
 nmap <silent> <leader>fi <Plug>(coc-fix-current)
