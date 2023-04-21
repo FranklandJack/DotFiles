@@ -34,7 +34,7 @@ set shortmess+=I "Remove splashscreen.
 if exists('+colorcolumn')
     " Highlight up to 255 columns (this is the current Vim max) beyond 
     " 'text width'
-    let &l:colorcolumn='+' . join(range(0, 254), ',+')
+    let &colorcolumn='+' . join(range(0, 254), ',+')
 endif
 
 " Remove banner from netrw file explorer (can be manually enabled with I).
