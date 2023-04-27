@@ -152,6 +152,12 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "F", function()
   win:setFrame(f)
 end)
 
+-- Lock computer shortcut
 hs.hotkey.bind({"ctrl", "alt"}, "L", function()
   hs.caffeinate.lockScreen()
 end) 
+
+-- Launch terminal
+hs.hotkey.bind({"cmd"}, "return", function()
+  hs.application.open('iterm.app')
+end)
