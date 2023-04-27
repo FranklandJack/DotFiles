@@ -9,6 +9,7 @@ if exists('+relativenumber')
     set relativenumber " Show relative numbers in gutter.
 endif
 set cursorline " Highlight current line.
+highlight CursorLineNr ctermbg=18 ctermfg=white cterm=bold
 set report=0  " Report number of lines changed for all changes.
 set showmatch " Show matching brackets.
 set noshowmode " Don't show current mode (is shown in airline bar anyway).
@@ -169,8 +170,8 @@ endif
 " =========
 set hlsearch        " Highlight matches.
 " Search results should be white and underline, none of that gross yellow.
-highlight Search ctermbg=black ctermfg=white cterm=underline
-highlight IncSearch ctermbg=black ctermfg=white cterm=underline
+highlight Search ctermbg=black ctermfg=white cterm=bold
+highlight IncSearch ctermbg=black ctermfg=white cterm=bold
 set incsearch       " Highlight matches as we type.
 set ignorecase      " Ignore case when searching.
 set smartcase       " Don't ignore case when different cases searched for.
