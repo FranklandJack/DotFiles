@@ -1,5 +1,5 @@
 # Set up the prompt
-source ~/.zsh/prompt.zsh
+eval "$(starship init zsh)"
 
 # Enable super glob.
 setopt extended_glob
@@ -74,12 +74,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 if [ -f ~/.bash/bash_aliases ]; then
     . ~/.bash/bash_aliases
 fi
-
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 # for fuzzy finder.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
