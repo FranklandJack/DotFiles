@@ -84,8 +84,14 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 # for fuzzy finder.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # show hidden files and use fd as find command.
-export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --no-ignore --exclude .git --exclude .clangd'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+if [[ $(uname) == "Darwin" ]]; then
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --no-ignore --exclude .git --exclude .clangd'
+elif command -v apt > /dev/null; then
+export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --no-ignore --exclude .git --exclude .clangd'
+else
+  echo 'Unknown OS! cannot use fd/fdfind!'
+fi
 
 # Source zle configurations.
 source ~/.zsh/zle.zsh
