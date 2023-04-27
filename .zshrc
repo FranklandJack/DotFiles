@@ -113,6 +113,12 @@ if [[ "${terminfo[kcbt]}" != "" ]]; then
 fi
 
 # For ccache
-export PATH=/usr/lib/ccache:$PATH
+if [[ $(uname) == "Darwin" ]]; then
+  export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+elif command -v apt > /dev/null; then
+  export PATH="/usr/lib/ccache:$PATH"
+else
+  echo 'Unknown OS! cannot append ccache path to PATH!'
+fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
