@@ -61,3 +61,6 @@
 [submodule ".config/bat/themes"]
 	path = .config/bat/themes
 	url = git@github.com:catppuccin/bat.git
+[submodule ".vim/pack/bundle/start/vim-startify"]
+	path = .vim/pack/bundle/start/vim-startify
+	url = git@github.com:mhinz/vim-startify.git
