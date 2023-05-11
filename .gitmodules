@@ -52,9 +52,6 @@
 [submodule ".vim/pack/bundle/start/coc.nvim"]
 	path = .vim/pack/bundle/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
-[submodule ".vim/pack/bundle/start/vim-snippets"]
-	path = .vim/pack/bundle/start/vim-snippets
-	url = git@github.com:honza/vim-snippets.git
 [submodule ".vim/pack/bundle/start/nvim"]
 	path = .vim/pack/bundle/start/nvim
 	url = git@github.com:catppuccin/nvim.git
