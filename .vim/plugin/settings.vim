@@ -193,7 +193,7 @@ endif
  endif
 " }}}
 if exists('&bellof')
-	set belloff=all " Never ring the bell for any reason.
+    set belloff=all " Never ring the bell for any reason.
 endif
 set expandtab "Always use spaces.
 set mouse=a " Enable mouse.
