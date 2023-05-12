@@ -50,10 +50,6 @@ colorscheme catppuccin-frappe " Set colorscheme.
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = '☰'
   let g:airline_symbols.maxlinenr = ''
-  let g:airline#extensions#tabline#enabled=1 " Enable tabline to be displayed.
-  let g:airline#extensions#tabline#left_sep = ' ' " Seperator around current tab in tabline.
-  let g:airline#extensions#tabline#left_alt_sep = '|' " Seperator around other tabs in tabline.
-  let g:airline#extensions#tabline#formatter = 'unique_tail_improved' "  Sets how file paths are displayed in each individual tab as well as the current buffer indicator in the upper right.
 " }}}
 " FZF {{{
 " ===
