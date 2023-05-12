@@ -31,9 +31,6 @@
 [submodule ".zsh/zsh-syntax-highlighting"]
 	path = .zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".vim/pack/bundle/start/vim-tmux-navigator"]
-	path = .vim/pack/bundle/start/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule ".vim/pack/bundle/start/fzf.vim"]
 	path = .vim/pack/bundle/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
