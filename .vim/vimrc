@@ -138,6 +138,10 @@ let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '^'
 let g:gitgutter_sign_modified_removed = '<'
 "}}}
+" Startify {{{
+" ========
+let g:startify_change_to_dir = 0
+" }}}
 " }}}
 " Plugins {{{
 " =======
