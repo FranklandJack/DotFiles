@@ -40,6 +40,9 @@ colorscheme catppuccin-frappe " Set colorscheme.
     let g:airline_symbols = {}
   endif
 
+  " Enable the tabline features.
+  let g:airline#extensions#tabline#enabled = 1
+
   " powerline symbols
   let g:airline_powerline_fonts = 1
   let g:airline_left_sep = ''
