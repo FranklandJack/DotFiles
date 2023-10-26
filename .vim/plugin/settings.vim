@@ -8,6 +8,17 @@ set number " Line numbers.
 if exists('+relativenumber')
     set relativenumber " Show relative numbers in gutter.
 endif
+" Terminal specific settings
+augroup terminal
+    " Disable line numering for terminals.
+    if exists('+relativenumber')
+        autocmd TermOpen * setlocal nonumber norelativenumber
+        autocmd TermEnter * setlocal nonumber norelativenumber
+    else
+        autocmd TermOpen * setlocal nonumber
+        autocmd TermEnter * setlocal nonumber
+    endif
+augroup END
 set cursorline " Highlight current line.
 highlight CursorLineNr ctermbg=18 ctermfg=white cterm=bold
 set report=0  " Report number of lines changed for all changes.
