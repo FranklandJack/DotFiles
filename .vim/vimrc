@@ -53,6 +53,9 @@ colorscheme catppuccin-frappe " Set colorscheme.
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = '☰'
   let g:airline_symbols.maxlinenr = ''
+
+  " Set the colorscheme.
+  let g:airline_theme = 'catppuccin'
 " }}}
 " FZF {{{
 " ===
